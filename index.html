@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sock Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧦 Sock Finder</h1>
+        <p class="subtitle">Never lose your socks again!</p>
+
+        <!-- Statistics -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalCount">0</div>
+                <div class="stat-label">Total Socks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number stat-left" id="leftCount">0</div>
+                <div class="stat-label">Left Socks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number stat-right" id="rightCount">0</div>
+                <div class="stat-label">Right Socks</div>
+            </div>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="card search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Search by color, pattern, or location..."
+                    class="input-field">
+            </div>
+
+            <label class="checkbox-label">
+                <input type="checkbox" id="showLeftOnly">
+                <span>Show only left socks</span>
+            </label>
+        </div>
+
+        <!-- Add New Sock -->
+        <div class="card">
+            <h2>Add New Sock</h2>
+            <div class="form-grid">
+                <input type="text" id="colorInput" placeholder="Color" class="input-field">
+                <input type="text" id="patternInput" placeholder="Pattern/Style" class="input-field">
+                <input type="text" id="locationInput" placeholder="Location" class="input-field">
+                <select id="sideSelect" class="input-field">
+                    <option value="true">Left</option>
+                    <option value="false">Right</option>
+                </select>
+            </div>
+            <button id="addButton" class="btn-primary">
+                ➕ Add Sock
+            </button>
+        </div>
+
+        <!-- Socks List -->
+        <div class="card">
+            <h2>Found Socks: <span id="foundCount">0</span></h2>
+            <div id="socksList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
